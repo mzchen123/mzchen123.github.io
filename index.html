@@ -96,105 +96,256 @@ I am dedicated to bridging the gap between AI and systems in the real world, and
             <table style="width:100%; border:0px; border-spacing:0px; border-collapse:separate; margin-left:auto; margin-right:auto;">
               <tbody>
 
-                <tr>
-                  <td style="padding:10px; width:70%; vertical-align:middle">
+                <tr class="publication-row">
+                  <td class="publication-info">
+                    <span class="papertitle">From Failed Trajectories to Reliable LLM Agents: Diagnosing and Repairing Harness Flaws</span><br>
+                    <i><b>Mengzhuo Chen</b>, Junjie Wang, Zhe Liu, Yawen Wang, Qing Wang</i><br>
+                    <div>
+                      <span class="accepted-venue">arXiv 2026</span>&nbsp;
+                      <span class="accepted-venue-detail">arXiv preprint</span>
+                    </div>
+                    <details class="publication-abstract">
+                      <summary>Abstract</summary>
+                      <div class="publication-abstract-content">
+                        <figure class="publication-abstract-figure">
+                          <img class="publication-abstract-image"
+                               src="images/publications/harness-fix.png"
+                               alt="Overview image for From Failed Trajectories to Reliable LLM Agents"
+                               onerror="this.onerror=null; this.src='images/publications/placeholder.svg';">
+                        </figure>
+                        <div class="publication-abstract-copy">
+                          <p>LLM-based agents increasingly rely on harnesses that provide execution environments, tool interfaces, context, lifecycle orchestration, observability, verification, and governance. Existing self-improving agents and automatic harness evolution methods mainly improve agents through runtime supervision, prompt optimization, workflow search, or harness modification based on final outcomes. However, they often fail to diagnose where the responsible evidence lies in failed trajectories and which harness layer causes the unreliable behavior, resulting in broad, indirect, or poorly scoped changes. This paper proposes HarnessFix, a trace-guided framework for diagnosing agent failures and repairing agent harnesses. HarnessFix compiles raw execution traces and harness code into a Harness-aware Trace Intermediate Representation (HTIR), which normalizes fragmented trajectory evidence and captures step-level provenance and control-flow relations. It then attributes failures to responsible trajectory steps and harness layers, consolidates recurring diagnoses into actionable flaw records, and maps them to scoped repair operators. Finally, HarnessFix generates and validates harness patches under flaw-specific repair specifications to reduce target flaws without introducing unacceptable regressions. We evaluate HarnessFix on SWE-Bench Verified, Terminal-Bench 2.0 Verified, GAIA and AppWorld. Across these benchmarks, HarnessFix improves held-out test performance over the initial harnesses by 15.2%-50.0%, outperforms human-designed and self-evolution baselines, and reveals recurring harness-flaw patterns across ETCLOVG layers.</p>
+                        </div>
+                      </div>
+                    </details>
+                  </td>
+                </tr>
+
+                <tr class="publication-row">
+                  <td class="publication-info">
                     <span class="papertitle">Seeing the Whole Elephant: A Benchmark for Failure Attribution in LLM-based Multi-Agent Systems</span><br>
                     <i><b>Mengzhuo Chen</b>, Junjie Wang, Fangwen Mu, Yawen Wang, Zhe Liu, Huanxiang Feng, Qing Wang</i><br>
                     <div>
                       <span class="accepted-venue">ACL 2026</span>&nbsp;
                       <span class="accepted-venue-detail">Annual Meeting of the Association for Computational Linguistics (CCF-A)</span>
                     </div>
+                    <details class="publication-abstract">
+                      <summary>Abstract</summary>
+                      <div class="publication-abstract-content">
+                        <figure class="publication-abstract-figure">
+                          <img class="publication-abstract-image"
+                               src="images/publications/failure-attribution.png"
+                               alt="Overview image for Seeing the Whole Elephant"
+                               onerror="this.onerror=null; this.src='images/publications/placeholder.svg';">
+                        </figure>
+                        <div class="publication-abstract-copy">
+                          <p>Failure attribution, i.e., identifying the responsible agent and decisive step of a failure, is particularly challenging in LLM-based multi-agent systems (MAS) due to their natural-language reasoning, nondeterministic outputs, and intricate interaction dynamics. A reliable benchmark is therefore essential to guide and evaluate attribution techniques. Yet existing benchmarks rely on partially observable traces that capture only agent outputs, omitting the inputs and context that developers actually use when debugging. We argue that failure attribution should be studied under full execution observability, aligning with real-world developer-facing scenarios where complete traces, rather than only outputs, are accessible for diagnosis. To this end, we introduce TraceElephant, a benchmark designed for failure attribution with full execution traces and reproducible environments. We then systematically evaluate failure attribution techniques across various configurations. Specifically, full traces improve attribution accuracy by up to 76% over a partial-observation counterpart, confirming that missing inputs obscure many failure causes. TraceElephant provides a foundation for follow-up failure attribution research, promoting evaluation practices that reflect real-world debugging and supporting the development of more transparent MASs.</p>
+                        </div>
+                      </div>
+                    </details>
                   </td>
                 </tr>
 
-                <tr>
-                  <td style="padding:10px; width:70%; vertical-align:middle">
+                <tr class="publication-row">
+                  <td class="publication-info">
                     <span class="papertitle">From Suspicious Signals to Crashes: Guiding Bug-driven GUI Testing via Code-inspired Tracing</span><br>
                     <i><b>Mengzhuo Chen</b>, Zhe Liu, Chunyang Chen, Junjie Wang, Boyu Wu, Yuekai Huang, Jun Hu, Qing Wang</i><br>
                     <div>
                       <span class="accepted-venue">FSE 2026</span>&nbsp;
                       <span class="accepted-venue-detail">ACM International Conference on the Foundations of Software Engineering (CCF-A)</span>
                     </div>
+                    <details class="publication-abstract">
+                      <summary>Abstract</summary>
+                      <div class="publication-abstract-content">
+                        <figure class="publication-abstract-figure">
+                          <img class="publication-abstract-image"
+                               src="images/publications/gui-code-tracing.png"
+                               alt="Overview image for From Suspicious Signals to Crashes"
+                               onerror="this.onerror=null; this.src='images/publications/placeholder.svg';">
+                        </figure>
+                        <div class="publication-abstract-copy">
+                          <p>Mobile applications frequently suffer from crash bugs that are triggered under specific GUI interaction sequences. Existing automated GUI testing techniques mainly emphasize increasing coverage through diverse exploration strategies, but they often fail to reach the precise interaction contexts that lead to crashes, resulting in low bug detection efficiency. This paper proposes TraceDroid, a novel automated GUI testing approach that leverages suspicious code-level signals to guide dynamic exploration. Instead of treating static analysis as an independent detection method, TraceDroid uses heuristic rules distilled from real crash reports to detect suspicious code segments, associate them with GUI widgets, and collect code-level interaction signals. It then constructs the Activity Transition Graph (ATG), performs rough path generation, and employs LLM-based executable path completion to produce a set of suspicious paths. Finally, TraceDroid executes these paths through global path planning, local path generation, and execution-aware monitoring to efficiently expose crashes. We evaluate TraceDroid on 70 real crash bugs across 42 open-source apps, comparing it with 15 state-of-the-art baselines. TraceDroid achieves the best performance, with a recall of 77%, exceeding the best baseline by 28%, while maintaining comparable or higher coverage. Furthermore, TraceDroid successfully detects 21 previously unknown crash bugs in 116 popular Google Play apps, of which 15 have been fixed and 6 confirmed by developers, demonstrating its effectiveness in real-world scenarios.</p>
+                        </div>
+                      </div>
+                    </details>
                   </td>
                 </tr>
 
-                 <tr>
-                   <td style="padding:10px; width:70%; vertical-align:middle">
+                 <tr class="publication-row">
+                  <td class="publication-info">
                      <span class="papertitle">Seeing is Believing: Vision-driven Non-crash Functional Bug Detection for Mobile Apps</span><br>
                      <i>Zhe Liu, Cheng Li, Chunyang Chen, Junjie Wang, <b>Mengzhuo Chen</b>, Boyu Wu, Yawen Wang, Jun Hu, Qing Wang</i><br>
                      <div>
                        <span class="accepted-venue">TSE 2025</span>&nbsp;
                        <span class="accepted-venue-detail">IEEE Transactions on Software Engineering (CCF-A)</span>
                      </div>
+                    <details class="publication-abstract">
+                      <summary>Abstract</summary>
+                      <div class="publication-abstract-content">
+                        <figure class="publication-abstract-figure">
+                          <img class="publication-abstract-image"
+                               src="images/publications/vision-functional-bug.png"
+                               alt="Overview image for Seeing is Believing"
+                               onerror="this.onerror=null; this.src='images/publications/placeholder.svg';">
+                        </figure>
+                        <div class="publication-abstract-copy">
+                          <p>Mobile app GUI (Graphical User Interface) pages now contain rich visual information, with the visual semantics of each page helping users understand the application logic. However, these complex visual and functional logic present new challenges to software testing. Existing automated GUI testing methods, constrained by the lack of reliable testing oracles, are limited to detecting crash bugs with obvious abnormal signals. Consequently, many non-crash functional bugs, ranging from unexpected behaviors to logical errors, often evade detection by current techniques. While these non-crash functional bugs can exhibit visual cues that serve as potential testing oracles, they often entail a sequence of screenshots, and detecting them necessitates an understanding of the operational logic among GUI page transitions, which is challenging traditional techniques. Considering the remarkable performance of Multimodal Large Language Models (MLLM) in visual and language understanding, this paper proposes Trident, a novel vision-driven, multi-agent collaborative automated GUI testing approach for detecting non-crash functional bugs. It comprises three agents: Explorer, Monitor, and Detector, to guide the exploration, oversee the testing progress, and spot issues. We also address several challenges, i.e., align visual and textual information for MLLM input, achieve functionality-oriented exploration, and infer test oracles for non-crash bugs, to enhance the performance of functionality bug detection. We evaluate Trident on 590 non-crash bugs and compare it with 12 baselines, it can achieve more than 14%-112% and 108%-147% boost in average recall and precision compared with the best baseline. The ablation study further proves the contribution of each module. Moreover, Trident identifies 43 new bugs on Google Play, of which 31 have been fixed.</p>
+                        </div>
+                      </div>
+                    </details>
                    </td>
                  </tr>
 
-                <tr>
-                  <td style="padding:10px; width:70%; vertical-align:middle">
+                <tr class="publication-row">
+                  <td class="publication-info">
                     <span class="papertitle">Beyond Static GUI Agent: Evolving LLM-based GUI Testing via Dynamic Memory</span><br>
                     <i><b>Mengzhuo Chen</b>, Zhe Liu, Chunyang Chen, Junjie Wang, Yangguang Xue, Boyu Wu, Yuekai Huang, Libin Wu, Qing Wang</i><br>
                     <div>
                       <span class="accepted-venue">ASE 2025</span>&nbsp;
                       <span class="accepted-venue-detail">IEEE/ACM International Conference on Automated Software Engineering (CCF-A)</span>
                     </div>
+                    <details class="publication-abstract">
+                      <summary>Abstract</summary>
+                      <div class="publication-abstract-content">
+                        <figure class="publication-abstract-figure">
+                          <img class="publication-abstract-image"
+                               src="images/publications/dynamic-memory-gui-agent.png"
+                               alt="Overview image for Beyond Static GUI Agent"
+                               onerror="this.onerror=null; this.src='images/publications/placeholder.svg';">
+                        </figure>
+                        <div class="publication-abstract-copy">
+                          <p>The development of Large Language Models (LLMs) enables LLM-based GUI testing to interact with graphical user interfaces by understanding GUI screenshots and generating actions, which are widely applied in industry and academia. However, current approaches test each app in isolation, lacking mechanisms for experience accumulation and reuse. This limitation often causes GUI testing approaches to miss deeper exploration and fail to trigger bug-prone functionalities. To address this, we propose MemoDroid, a three-layer memory mechanism that augments LLM-based GUI testing with the ability to evolve through repeated interaction. MemoDroid designs episodic memory to capture functional-level testing traces, reflective memory to summarize issue patterns and redundant behaviors, and strategic memory to synthesize cross-app exploration strategies. These memory layers are dynamically retrieved and injected into LLM prompts at runtime, enabling the agent to reuse successful behaviors, avoid ineffective actions, and prioritize bug-prone paths. We implement MemoDroid as a lightweight plugin, which can be integrated into existing LLM-based GUI testing approaches. We evaluate MemoDroid on real-world apps from 15 diverse app categories. Results show that MemoDroid enhances GUI testing performance across five baselines, with activity and code coverage increasing by 79% - 96% and 81% - 97%, and bug detection improving by 57% - 198%. Ablation studies confirm the contributions of each memory layer. Furthermore, MemoDroid detects 49 new bugs in 200 popular apps, with 35 confirmed fixes and 14 acknowledged by developers, showing its practical value in memory-driven GUI testing.</p>
+                        </div>
+                      </div>
+                    </details>
                   </td>
                 </tr>
                 
                 
-                <tr>
-                  <td style="padding:10px; width:70%; vertical-align:middle">
+                <tr class="publication-row">
+                  <td class="publication-info">
                     <span class="papertitle">Think Outside the Box: Automating Inter-App Functionality Testing via Memory Implanting and Reasoning</span><br>
                     <i><b>Mengzhuo Chen</b>, Zhe Liu, Chunyang Chen, Junjie Wang, Yangguang Xue, Boyu Wu, Libin Wu, Qing Wang</i><br>
                     <div>
                       <span class="accepted-venue">ICSE 2026</span>&nbsp;
                       <span class="accepted-venue-detail">IEEE/ACM International Conference on Software Engineering (CCF-A)</span>
                     </div>
+                    <details class="publication-abstract">
+                      <summary>Abstract</summary>
+                      <div class="publication-abstract-content">
+                        <figure class="publication-abstract-figure">
+                          <img class="publication-abstract-image"
+                               src="images/publications/inter-app-testing.png"
+                               alt="Overview image for Think Outside the Box"
+                               onerror="this.onerror=null; this.src='images/publications/placeholder.svg';">
+                        </figure>
+                        <div class="publication-abstract-copy">
+                          <p>Inter-app functionality requires multiple apps to collaborate to complete a functional task, which has become essential in modern software ecosystems. However, due to the dynamic updates and openness of modern apps, automated GUI testing based on predefined interaction models or trained on historical data is difficult to achieve inter-app testing. The low fault tolerance and context-dependent characteristics of inter-app functionality paths, lead the LLM-based GUI testing to have UI semantic mapping ambiguity and irreversible operation generating problem. To address these challenges, this paper proposes InterDroid, an automated GUI testing approach that enhances inter-app testing by implanting structured semantic knowledge into LLM's memory. InterDroid retrieves relevant historical inter-app interactions using a multimodal retrieval method that integrates visual and textual GUI information, significantly improving retrieval accuracy. Inspired by the research on memory implantation in cognitive psychology, we design a memory implanting mechanism: global memory presents inter-app paths in a conversational form, simulating prior testing experience, and local memory tracks real-time state transitions. Additionally, InterDroid proposes a testing monitor that dynamically tracks testing progress and detects deviations, ensuring comprehensive test execution. InterDroid is designed as an integrable module that activates upon detecting the transition of the app to another app, allowing existing automated GUI testing tools to continue seamlessly after inter-app testing is completed. We evaluate InterDroid on 100 inter-app functionalities across 63 apps, comparing it with state-of-the-art GUI testing baselines. InterDroid achieves up to 133% improvement in page coverage, 124% in action coverage, and 268% in exact match accuracy over the best baseline. Furthermore, InterDroid detects 43 new crash bugs in real-world apps from Google Play, with 31 fixed and 12 confirmed by developers.</p>
+                        </div>
+                      </div>
+                    </details>
                   </td>
                 </tr>
                 
 
                 
-                <tr>
-                  <td style="padding:10px; width:70%; vertical-align:middle">
+                <tr class="publication-row">
+                  <td class="publication-info">
                     <span class="papertitle">Standing on the Shoulders of Giants: Bug-Aware Automated GUI Testing via Retrieval Augmentation</span><br>
                     <i><b>Mengzhuo Chen</b>, Zhe Liu, Chunyang Chen, Junjie Wang, Boyu Wu, Jun Hu, Qing Wang</i><br>
                     <div>
                       <span class="accepted-venue">FSE 2025</span>&nbsp;
                       <span class="accepted-venue-detail">ACM International Conference on the Foundations of Software Engineering (CCF-A)</span>
                     </div>
+                    <details class="publication-abstract">
+                      <summary>Abstract</summary>
+                      <div class="publication-abstract-content">
+                        <figure class="publication-abstract-figure">
+                          <img class="publication-abstract-image"
+                               src="images/publications/retrieval-gui-testing.png"
+                               alt="Overview image for Standing on the Shoulders of Giants"
+                               onerror="this.onerror=null; this.src='images/publications/placeholder.svg';">
+                        </figure>
+                        <div class="publication-abstract-copy">
+                          <p>In software development, similar apps often encounter similar bugs due to shared functionalities and implementation methods. However, current automated GUI testing methods mainly focus on generating test scripts to cover more pages by analyzing the internal structure of the app, without targeted exploration of paths that may trigger bugs, resulting in low efficiency in bug discovery. Considering that a large number of bug reports on open source platforms can provide external knowledge for testing, this paper proposes BugHunter, a novel bug-aware automated GUI testing approach that generates exploration paths guided by bug reports from similar apps, utilizing a combination of Large Language Models (LLMs) and Retrieval-Augmented Generation (RAG). Instead of focusing solely on coverage, BugHunter dynamically adapts the testing process to target bug paths, thereby increasing bug detection efficiency. BugHunter first builds a high-quality bug knowledge base from historical bug reports. Then it retrieves relevant reports from this large bug knowledge base using a two-stage retrieval process, and generates test paths based on similar apps’ bug reports. BugHunter also introduces a local and global path-planning mechanism to handle differences in functionality and UI design across apps, and the ambiguous behavior or missing steps in the online bug reports. We evaluate BugHunter on 121 bugs across 71 apps and compare its performance against 16 state-of-the-art baselines. BugHunter achieves 60% improvement in bug detection over the best baseline, with comparable or higher coverage against the baselines. Furthermore, BugHunter successfully detects 49 new crash bugs in real-world apps from Google Play, with 33 bugs fixed, 9 confirmed, and 7 pending feedback.</p>
+                        </div>
+                      </div>
+                    </details>
                   </td>
                 </tr>
 
-                <tr>
-                  <td style="padding:10px; width:70%; vertical-align:middle">
+                <tr class="publication-row">
+                  <td class="publication-info">
                     <span class="papertitle">🏆 Unblind Text Inputs: Predicting Hint-text of Text Input in Mobile Apps via LLM</span><br>
                     <i>Zhe Liu, Chunyang Chen, Junjie Wang, <b>Mengzhuo Chen</b>, Boyu Wu, Yuekai Huang, Jun Hu, Qing Wang</i><br>
                     <div>
                       <span class="accepted-venue">CHI 2024</span>&nbsp;
                       <span class="accepted-venue-detail">ACM CHI Conference on Human Factors in Computing Systems (CCF-A)</span>
                     </div>
+                    <details class="publication-abstract">
+                      <summary>Abstract</summary>
+                      <div class="publication-abstract-content">
+                        <figure class="publication-abstract-figure">
+                          <img class="publication-abstract-image"
+                               src="images/publications/hint-text-prediction.png"
+                               alt="Overview image for Unblind Text Inputs"
+                               onerror="this.onerror=null; this.src='images/publications/placeholder.svg';">
+                        </figure>
+                        <div class="publication-abstract-copy">
+                          <p>Mobile apps have become indispensable for accessing and participating in various environments, especially for low-vision users. Users with visual impairments can use screen readers to read the content of each screen and understand the content that needs to be operated. Screen readers need to read the hint-text attribute in the text input component to remind visually impaired users what to fill in. Unfortunately, based on our analysis of 4,501 Android apps with text inputs, over 0.76 of them are missing hint-text. These issues are mostly caused by developers' lack of awareness when considering visually impaired individuals. To overcome these challenges, we developed an LLM-based hint-text generation model called HintDroid, which analyzes the GUI information of input components and uses in-context learning to generate the hint-text. To ensure the quality of hint-text generation, we further designed a feedback-based inspection mechanism to further adjust hint-text. The automated experiments demonstrate the high BLEU and a user study further confirms its usefulness. HintDroid can not only help visually impaired individuals, but also help ordinary people understand the requirements of input components.</p>
+                        </div>
+                      </div>
+                    </details>
                   </td>
                 </tr>
                 
-                <tr>
-                  <td style="padding:10px; width:70%; vertical-align:middle">
+                <tr class="publication-row">
+                  <td class="publication-info">
                     <span class="papertitle">Testing the Limits: Unusual Text Inputs Generation for Mobile App Crash Detection with Large Language Model</span><br>
                     <i>Zhe Liu, Chunyang Chen, Junjie Wang, <b>Mengzhuo Chen</b>, Boyu Wu, Zhilin Tian, Yuekai Huang, Jun Hu, Qing Wang</i><br>
                     <div>
                       <span class="accepted-venue">ICSE 2024</span>&nbsp;
                       <span class="accepted-venue-detail">IEEE/ACM International Conference on Software Engineering (CCF-A)</span>
                     </div>
+                    <details class="publication-abstract">
+                      <summary>Abstract</summary>
+                      <div class="publication-abstract-content">
+                        <figure class="publication-abstract-figure">
+                          <img class="publication-abstract-image"
+                               src="images/publications/unusual-text-inputs.png"
+                               alt="Overview image for Testing the Limits"
+                               onerror="this.onerror=null; this.src='images/publications/placeholder.svg';">
+                        </figure>
+                        <div class="publication-abstract-copy">
+                          <p>Mobile applications have become a ubiquitous part of our daily life, providing users with access to various services and utilities. Text input, as an important interaction channel between users and applications, plays an important role in core functionality such as search queries, authentication, messaging, etc. However, certain special text (e.g., -18 for Font Size) can cause the app to crash, and generating diversified unusual inputs for fully testing the app is highly demanded. Nevertheless, this is also challenging due to the combination of explosion dilemma, high context sensitivity, and complex constraint relations. This paper proposes InputBlaster which leverages the LLM to automatically generate unusual text inputs for mobile app crash detection. It formulates the unusual inputs generation problem as a task of producing a set of test generators, each of which can yield a batch of unusual text inputs under the same mutation rule. In detail, InputBlaster leverages LLM to produce the test generators together with the mutation rules serving as the reasoning chain, and utilizes the in-context learning schema to demonstrate the LLM with examples for boosting the performance. InputBlaster is evaluated on 36 text input widgets with cash bugs involving 31 popular Android apps, and results show that it achieves 78% bug detection rate, with 136% higher than the best baseline. Besides, we integrate it with the automated GUI testing tool and detect 37 unseen crashes in real-world apps from Google Play.</p>
+                        </div>
+                      </div>
+                    </details>
                   </td>
                 </tr>
                 
-                <tr>
-                  <td style="padding:10px; width:70%; vertical-align:middle">
+                <tr class="publication-row">
+                  <td class="publication-info">
                     <span class="papertitle">Make LLM a Testing Expert: Bringing Human-like Interaction to Mobile GUI Testing via Functionality-aware Decisions</span><br>
                     <i>Zhe Liu, Chunyang Chen, Junjie Wang, <b>Mengzhuo Chen</b>, Boyu Wu, Xing Che, Dandan Wang, Qing Wang</i><br>
                     <div>
                       <span class="accepted-venue">ICSE 2024</span>&nbsp;
                       <span class="accepted-venue-detail">IEEE/ACM International Conference on Software Engineering (CCF-A)</span>
                     </div>
+                    <details class="publication-abstract">
+                      <summary>Abstract</summary>
+                      <div class="publication-abstract-content">
+                        <figure class="publication-abstract-figure">
+                          <img class="publication-abstract-image"
+                               src="images/publications/functionality-aware-gui-testing.png"
+                               alt="Overview image for Make LLM a Testing Expert"
+                               onerror="this.onerror=null; this.src='images/publications/placeholder.svg';">
+                        </figure>
+                        <div class="publication-abstract-copy">
+                          <p>Automated Graphical User Interface (GUI) testing plays a crucial role in ensuring app quality, especially as mobile applications have become an integral part of our daily lives. Despite the growing popularity of learning-based techniques in automated GUI testing due to their ability to generate human-like interactions, they still suffer from several limitations, such as low testing coverage, inadequate generalization capabilities, and heavy reliance on training data. Inspired by the success of Large Language Models (LLMs) like ChatGPT in natural language understanding and question answering, we formulate the mobile GUI testing problem as a Q&A task. We propose GPTDroid, asking LLM to chat with the mobile apps by passing the GUI page information to LLM to elicit testing scripts, and executing them to keep passing the app feedback to LLM, iterating the whole process. Within this framework, we have also introduced a functionality-aware memory prompting mechanism that equips the LLM with the ability to retain testing knowledge of the whole process and conduct long-term, functionality-based reasoning to guide exploration. We evaluate it on 93 apps from Google Play and demonstrate that it outperforms the best baseline by 32% in activity coverage, and detects 31% more bugs at a faster rate. Moreover, GPTDroid identify 53 new bugs on Google Play, of which 35 have been confirmed and fixed.</p>
+                        </div>
+                      </div>
+                    </details>
                   </td>
                 </tr>
                 
@@ -230,5 +381,6 @@ I am dedicated to bridging the gap between AI and systems in the real world, and
       </tbody>
     </table>
     
+
   </body>
 </html>

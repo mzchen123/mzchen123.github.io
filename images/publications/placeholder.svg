@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="340" height="210" viewBox="0 0 340 210" role="img" aria-labelledby="title desc">
+  <title id="title">Publication overview placeholder</title>
+  <desc id="desc">A neutral placeholder for a publication overview image.</desc>
+  <rect width="340" height="210" rx="8" fill="#f6f8fa"/>
+  <rect x="0.5" y="0.5" width="339" height="209" rx="7.5" fill="none" stroke="#d9e2ea"/>
+  <path d="M48 150h244M72 126h62l27-32 39 44 26-24 42 36" fill="none" stroke="#a8b6c4" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="110" cy="72" r="18" fill="#c9d4df"/>
+  <text x="170" y="178" text-anchor="middle" font-family="Lato, Verdana, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#7a8998">Overview</text>
+</svg>

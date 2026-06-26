@@ -185,6 +185,73 @@ h3 {
   font-weight: 700;
 }
 
+.publication-row td {
+  padding: 12px 10px;
+  vertical-align: top;
+}
+
+.publication-info {
+  width: 100%;
+}
+
+.publication-abstract {
+  margin-top: 8px;
+}
+
+.publication-abstract summary {
+  cursor: pointer;
+  color: #0095ff;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.publication-abstract summary:hover,
+.publication-abstract summary:focus {
+  color: #FF9547;
+}
+
+.publication-abstract-content {
+  margin-top: 6px;
+}
+
+.publication-abstract-content::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+.publication-abstract-copy p {
+  margin: 0;
+  color: #555;
+  font-size: 15px;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+.publication-abstract-figure {
+  float: left;
+  margin: 2px 16px 8px 0;
+}
+
+.publication-abstract-image {
+  display: block;
+  max-width: 100%;
+  max-height: 400px;
+  width: auto;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid #d9e2ea;
+  background: #ffffff;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 700px) {
+  .publication-abstract-figure {
+    float: none;
+    margin: 8px 0 10px;
+  }
+}
+
 .author {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
   font-size: 14px;

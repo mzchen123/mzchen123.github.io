@@ -2,6 +2,8 @@ Put publication overview images in this directory.
 
 Expected filenames:
 
+- llm-agent-trajectory-analysis.png
+- combination-interaction-gui-testing.png
 - harness-fix.png
 - failure-attribution.png
 - gui-code-tracing.png

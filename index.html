@@ -48,7 +48,7 @@ I am dedicated to bridging the gap between AI and systems in the real world, and
                   </td>
 
                   <td style="padding: 20px; padding-left: 0px; padding-bottom: 0px; width:20%; max-width:40%; text-align: center;">
-                    <img style="width: 150px; height: 150px; object-fit: cover; border-radius: 50%; box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.3);"
+                    <img style="width: 250px; height: 250px; object-fit: cover; border-radius: 50%; box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.3);"
                          alt="profile photo"
                          src="images/profile.png"
                          class="hoverZoomLink">
@@ -65,6 +65,8 @@ I am dedicated to bridging the gap between AI and systems in the real world, and
                   <td style="padding-top: 0px; padding-bottom: 10px; padding-left: 20px; padding-right: 20px; width:100%; vertical-align:middle">
                     <h2><b>🔥 News</b></h2>
                     <ul class="news-list">
+<li> 2026.07.28: 🎉🎉 A full research paper is accepted at Proceedings of the 2026 IEEE/ACM International Conference on Automated Software Engineering (ASE'26).</li>
+<li> 2026.07.25: 🎉🎉 A paper is accepted at IEEE Transactions on Software Engineering (TSE'26).</li>
 <li> 2026.04: 🎉🎉 A full research paper is accepted at Proceedings of the 64th Annual Meeting of the Association for Computational Linguistics (ACL'26).</li>
 <li> 2026.03: 🎉🎉 A full research paper is accepted at Proceedings of the 2026 ACM International Conference on the Foundations of Software Engineering (FSE'26).</li>
 <li> 2025.09: 🎉🎉 A full research paper is accepted at IEEE Transactions on Software Engineering (TSE'25).</li>
@@ -95,6 +97,56 @@ I am dedicated to bridging the gap between AI and systems in the real world, and
             
             <table style="width:100%; border:0px; border-spacing:0px; border-collapse:separate; margin-left:auto; margin-right:auto;">
               <tbody>
+
+                <tr class="publication-row">
+                  <td class="publication-info">
+                    <span class="papertitle">A Survey for LLM Agent Trajectory Analysis: From Failure Attribution to Enhancement</span><br>
+                    <i>Junjie Wang, Yawen Wang, <b>Mengzhuo Chen</b>, Xiaofei Xie, Chunyang Chen, Fangwen Mu, Zhe Liu, Qing Wang</i><br>
+                    <div>
+                      <span class="accepted-venue">TSE 2026</span>&nbsp;
+                      <span class="accepted-venue-detail">IEEE Transactions on Software Engineering (CCF-A)</span>
+                    </div>
+                    <details class="publication-abstract">
+                      <summary>Abstract</summary>
+                      <div class="publication-abstract-content">
+                        <figure class="publication-abstract-figure">
+                          <img class="publication-abstract-image"
+                               src="images/publications/llm-agent-trajectory-analysis.png"
+                               alt="Overview image for A Survey for LLM Agent Trajectory Analysis"
+                               onerror="this.onerror=null; this.src='images/publications/placeholder.svg';">
+                        </figure>
+                        <div class="publication-abstract-copy">
+                          <p>Large language model (LLM) agents have emerged as a transformative software paradigm, enabling autonomous task execution through natural language reasoning, multi-agent collaboration, and tool integration. However, their non-deterministic decision-making and complex interaction patterns introduce unprecedented challenges for failure diagnosis and system improvement. Unlike traditional software, where failures often manifest as code defects, agent failures are embedded in lengthy, language-heavy execution trajectories that include natural language reasoning, obscuring root causes and complicating repair. This survey provides a systematic review of the burgeoning field of trajectory analysis for failure attribution and system enhancement in LLM agents. We collect 55 papers published between early 2025 and April 2026, spanning software engineering, artificial intelligence, and human-computer interaction. We organize the literature along five key dimensions: failure taxonomy, failure attribution, system enhancement and optimization, trajectory monitoring and analysis tools, as well as datasets and benchmarks. Our analysis reveals that while the field has progressed rapidly from simple LLM prompting to causal inference, fine-tuned tracer models, and dynamic intervention, the step-level attribution accuracy remains limited, and benchmark diversity is still a bottleneck. We identify four complementary taxonomic perspectives, four methodological paradigms for attribution, and three families of enhancement strategies. We also critically assess existing benchmarks, highlighting a recent shift toward full observability and unrecoverable failure annotation. This survey serves as both a structured overview for current research and a strategic guide for advancing robust, efficient, and self-improving agent ecosystems. We further call upon the software engineering community to engage more deeply with this emerging class of software, bringing expertise in fault localization, program repair, and empirical methods to bear on the unique challenges posed by LLM agents.</p>
+                        </div>
+                      </div>
+                    </details>
+                  </td>
+                </tr>
+
+                <tr class="publication-row">
+                  <td class="publication-info">
+                    <span class="papertitle">Piece by Piece: Automating Combination Interaction GUI Testing via Planning and Dual Memory</span><br>
+                    <i>Zhe Liu, Oujin Wang, Junjie Wang, Chunyang Chen, <b>Mengzhuo Chen</b>, Boyu Wu, Yuekai Huang, Qing Wang</i><br>
+                    <div>
+                      <span class="accepted-venue">ASE 2026</span>&nbsp;
+                      <span class="accepted-venue-detail">IEEE/ACM International Conference on Automated Software Engineering (CCF-A)</span>
+                    </div>
+                    <details class="publication-abstract">
+                      <summary>Abstract</summary>
+                      <div class="publication-abstract-content">
+                        <figure class="publication-abstract-figure">
+                          <img class="publication-abstract-image"
+                               src="images/publications/combination-interaction-gui-testing.png"
+                               alt="Overview image for Piece by Piece"
+                               onerror="this.onerror=null; this.src='images/publications/placeholder.svg';">
+                        </figure>
+                        <div class="publication-abstract-copy">
+                          <p>Combination interactions require coordinated operations across multiple GUI widgets within a page to complete a functional task, which are common in modern mobile apps. However, due to widget dependencies, dynamic interface transitions, and context-sensitive execution, existing automated GUI testing approaches based on predefined models or state exploration struggle to reliably complete such interactions. LLM-based GUI testing methods improve semantic understanding but often generate inconsistent actions due to the lack of coordination modeling and interaction context. To address these challenges, this paper proposes COMBDroid, an automated GUI testing approach that enables reliable completion of combination interactions through structured planning and dual memory. COMBDroid first detects combination interaction patterns from GUI structure, then generates page-level interaction plans and grounds them into widget-level executable actions. Inspired by Sudoku solving, COMBDroid maintains a dual-memory mechanism, where context memory preserves execution states within a functionality and experience memory captures reusable interaction patterns. COMBDroid is designed as an integrable module that activates when combination interactions are detected and allows existing testing tools to resume exploration after completion. We evaluate COMBDroid on 100 combination interaction functionalities collected from 100 mobile apps, comparing it with 15 state-of-the-art GUI testing baselines. COMBDroid achieves 103% higher passing rate than the best baseline and improves activity coverage by 65%-100% when integrated with existing testing tools. Furthermore, GUI testing tools integrated with COMBDroid detect 37 new crash bugs in real-world apps, with 26 fixed and the remaining confirmed by developers, demonstrating its effectiveness in improving GUI testing.</p>
+                        </div>
+                      </div>
+                    </details>
+                  </td>
+                </tr>
 
                 <tr class="publication-row">
                   <td class="publication-info">
@@ -369,7 +421,7 @@ I am dedicated to bridging the gap between AI and systems in the real world, and
                       <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=J_1gbTzYicjvSHfVs8i-bnA1t65D8qMgjjLiQN7Y7RA&cl=ffffff&w=a"></script>
                     </div>
                     <p style="text-align:center; font-size:small; color: #666;">
-                      Last Update: April, 2026
+                      Last Update: August, 2026
                     </p>
                   </td>
                 </tr>

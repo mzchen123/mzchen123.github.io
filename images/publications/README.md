@@ -14,5 +14,11 @@ Expected filenames:
 - hint-text-prediction.png
 - unusual-text-inputs.png
 - functionality-aware-gui-testing.png
+- culturellm-overview.png
+- unireasonmed.png
+- hote.png
+- fleming-r1.png
+- vem.png
+- fleming-vl.png
 
 The page falls back to placeholder.svg until each image exists.

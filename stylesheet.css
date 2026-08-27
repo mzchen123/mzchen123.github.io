@@ -185,6 +185,20 @@ h3 {
   font-weight: 700;
 }
 
+.papertitle a {
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  text-decoration: none;
+}
+
+.papertitle a:hover,
+.papertitle a:focus {
+  color: inherit;
+  text-decoration: underline;
+}
+
 .publication-row td {
   padding: 12px 10px;
   vertical-align: top;
@@ -231,6 +245,11 @@ h3 {
 .publication-abstract-figure {
   float: left;
   margin: 2px 16px 8px 0;
+}
+
+.publication-abstract-figure-full-width {
+  float: none;
+  margin: 2px 0 12px;
 }
 
 .publication-abstract-image {

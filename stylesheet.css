@@ -264,6 +264,10 @@ h3 {
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.15);
 }
 
+.publication-abstract-image-compact {
+  max-height: 340px;
+}
+
 @media (max-width: 700px) {
   .publication-abstract-figure {
     float: none;

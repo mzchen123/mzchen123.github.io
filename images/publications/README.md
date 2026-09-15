@@ -20,5 +20,6 @@ Expected filenames:
 - fleming-r1.png
 - vem.png
 - fleming-vl.png
+- measure_creativity.png
 
 The page falls back to placeholder.svg until each image exists.

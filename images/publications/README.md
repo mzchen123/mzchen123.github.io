@@ -21,5 +21,6 @@ Expected filenames:
 - vem.png
 - fleming-vl.png
 - measure_creativity.png
+- sail.png
 
 The page falls back to placeholder.svg until each image exists.
